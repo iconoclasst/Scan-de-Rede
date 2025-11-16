@@ -12,7 +12,7 @@ Equipamentos iniciais:
 1. Ubuntu Server 22.04 Iso Image
 1. Alpine Linux VM version
 
-![](Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.001.png)
+![](images/Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.001.png)
 
 Figure 1: Cen´ario simplificado
 
@@ -28,7 +28,7 @@ OBS: O adaptador NAT permite requisi¸c˜oes para a internet publica´ de dentro
 
 Ao iniciar o RouterOS (MikroTik), verificamos se as interfaces foram recon- hecidas com o comando interface print. A ether1 ´e a NAT e a ether2 ´e a Host-Only.
 
-![](Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.002.png)
+![](images/Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.002.png)
 
 Figure 2: Interfaces MikroTik
 
@@ -36,7 +36,7 @@ Para adicionar um IP fixo na ether2, utilizamos o comando ip address add address
 
 Podemos ver os endere¸cos definidos com o comando ip address print:
 
-![](Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.003.png)
+![](images/Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.003.png)
 
 Figure 3: Endere¸cos das interfaces
 
@@ -50,7 +50,7 @@ miss˜ao de roteamento via MikroTik. O Ubuntu Server e o Alpine Linux ter˜ao
 
 uma regra de NAT. Podemos usar a interface gr´afica ou o comando de terminal /ip firewall nat add chain=srcnat out-interface=ether1 action=masquerade comment="NAT para LAN". Esse comando cria no firewall uma regra de nat para
 
-![](Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.004.png)
+![](images/Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.004.png)
 
 Figure 4: Ping para internet publica´
 
@@ -60,7 +60,7 @@ permitir que os pacotes direcionados `a internet publica´ passem pela interface
 
 No virtual box, adicionamos ao Ubuntu Server a interface host-only da subnet 192.168.56.0/24. Durante a instala¸c˜ao, definimos na interface as informa¸c˜oes iniciais de rede. Para endere¸co IP, utilizamos o IP est´atico 192.168.56.5/24 e como gateway, inserimos o endere¸co do MikroTik 192.168.56.10. De in´ıcio, para termos servi¸cos funcionando, instalamos no servidor o OpenSSH e o Ng- nix. Opcionalmente, abrimos o arquivo etcsshsshd~~ config e mudamos a porta padr˜ao de 22 para 5347. Ap´os, reiniciamos e habilitamos o servi¸co SSH.
 
-![](Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.005.jpeg)
+![](images/Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.005.jpeg)
 
 Figure 5: Servi¸co SSH
 
@@ -68,7 +68,7 @@ O servidor web Nginx servir´a apenas para ter um outro servi¸co com porta disp
 
 Por fim, instalamos e configuramos um servidor de arquivos Samba.
 
-![](Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.006.png)
+![](images/Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.006.png)
 
 Figure 6: Confirma¸c˜ao de SSH e Nginx
 
@@ -110,7 +110,7 @@ sudo nmap -sS -T5 -p- -oN $OUT\_TXT -oX $OUT\_XML $NETWORK
 
 Para executar temos que estar na mesma pasta e dar permiss˜ao de execu¸c˜ao com sudo chmod +x inventario.sh. E ent˜ao, usamos o comando ./inventario.sh. O script gerou os dois arquivos citados:
 
-![](Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.007.png)
+![](images/Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.007.png)
 
 Figure 7: Diret´orio com arquivos
 
@@ -120,19 +120,19 @@ A seguir, abrimos o programa zenmap e inserimos a captura de rede do arquivo XML
 
 a captura feita no arquivo XML.
 
-![](Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.008.jpeg)
+![](images/Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.008.jpeg)
 
 Figure 8: Captura em texto
 
-![](Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.009.jpeg)
+![](images/Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.009.jpeg)
 
 Figure 9: Topologia desenhada
 
-![](Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.010.png)
+![](images/Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.010.png)
 
 Figure 10: M´aquinas registradas na captura
 
-![](Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.011.png)
+![](images/Aspose.Words.a0adb7f2-336b-4564-b8e2-9f9aec86326e.011.png)
 
 Figure 11: Servi¸cos registrados na captura
 7
