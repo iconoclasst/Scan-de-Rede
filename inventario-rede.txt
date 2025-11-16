@@ -1,0 +1,32 @@
+Nmap scan report for 192.168.56.5
+Host is up (0.00039s latency).
+Not shown: 65532 closed tcp ports (reset)
+PORT     STATE SERVICE
+80/tcp   open  http
+445/tcp  open  microsoft-ds
+5347/tcp open  unknown
+MAC Address: 08:00:27:C8:14:84 (Oracle VirtualBox virtual NIC)
+
+Nmap scan report for 192.168.56.6
+Host is up (0.0010s latency).
+All 65535 scanned ports on 192.168.56.6 are in ignored states.
+Not shown: 65535 closed tcp ports (reset)
+MAC Address: 08:00:27:F0:2C:6D (Oracle VirtualBox virtual NIC)
+
+Nmap scan report for 192.168.56.10
+Host is up (0.00089s latency).
+Not shown: 65525 closed tcp ports (reset)
+PORT      STATE    SERVICE
+21/tcp    open     ftp
+22/tcp    open     ssh
+23/tcp    open     telnet
+80/tcp    open     http
+2000/tcp  open     cisco-sccp
+8291/tcp  open     unknown
+8728/tcp  open     unknown
+8729/tcp  open     unknown
+12814/tcp filtered unknown
+23814/tcp filtered unknown
+MAC Address: 08:00:27:66:06:DB (Oracle VirtualBox virtual NIC)
+
+
